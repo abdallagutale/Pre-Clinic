@@ -7,7 +7,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
-    <title>Pre-Clinic - Medical & Hospital</title>
+    <%--<title>Pre-Clinic - Medical & Hospital</title>--%>
+    <title>Pre-Clinic</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
@@ -22,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/feather.css">
     <!-- Main CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -81,11 +83,15 @@
                                         <img src="assets/img/icons/menu-icon-02.svg" alt=""></span> <span>Registrations </span><span class="menu-arrow"></span></a>
                                     <ul style="display: none;">
                                         <li class="submenu">
-                                            <a href="javascript:void(0);"><span><img src="assets/img/icons/menu-icon-02.svg" alt=""></span> <span>Doctors</span> <span class="menu-arrow"></span></a>
+                                            <a href="javascript:void(0);"><span>
+                                                <img src="assets/img/icons/menu-icon-02.svg" alt=""></span> <span>Doctors</span> <span class="menu-arrow"></span></a>
                                             <ul style="display: none;">
-                                                <li><a href="Specialist.aspx" <span><img src="assets/img/icons/menu-icon-02.svg" alt=""></span> <span>Specialist</span> </a></li>
-                                                <li><a href="#" <span><img src="assets/img/icons/menu-icon-02.svg" alt=""></span> <span>Doctor</span> </a></li>
-                                                <li><a href="#" <span><img src="assets/img/icons/menu-icon-02.svg" alt=""></span> <span>Schedule</span> </a></li>
+                                                <li><a href="Specialist.aspx"><span>
+                                                    <img src="assets/img/icons/menu-icon-02.svg" alt=""></span> <span>Specialist</span> </a></li>
+                                                <li><a href="#"><span>
+                                                    <img src="assets/img/icons/menu-icon-02.svg" alt=""></span> <span>Doctor</span> </a></li>
+                                                <li><a href="#"><span>
+                                                    <img src="assets/img/icons/menu-icon-02.svg" alt=""></span> <span>Schedule</span> </a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -374,29 +380,29 @@
 
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
-
-            <!-- jQuery -->
-            <script src="assets/js/jquery-3.7.1.min.js"></script>
-            <!-- Bootstrap Core JS -->
-            <script src="assets/js/bootstrap.bundle.min.js"></script>
-            <!-- Feather Js -->
-            <script src="assets/js/feather.min.js"></script>
-            <!-- Slimscroll -->
-            <script src="assets/js/jquery.slimscroll.js"></script>
-            <!-- Select2 Js -->
-            <script src="assets/js/select2.min.js"></script>
-            <!-- Datatables JS -->
-            <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
-            <script src="assets/plugins/datatables/datatables.min.js"></script>
-            <!-- counterup JS -->
-            <script src="assets/js/jquery.waypoints.js"></script>
-            <script src="assets/js/jquery.counterup.min.js"></script>
-            <!-- Apexchart JS -->
-            <script src="assets/plugins/apexchart/apexcharts.min.js"></script>
-            <script src="assets/plugins/apexchart/chart-data.js"></script>
-            <!-- Custom JS -->
-            <script src="assets/js/app.js"></script>
         </div>
     </form>
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap Core JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Feather Js -->
+    <script src="assets/js/feather.min.js"></script>
+    <!-- Slimscroll -->
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <!-- Select2 Js -->
+    <script src="assets/js/select2.min.js"></script>
+    <!-- Datatables JS -->
+    <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/plugins/datatables/datatables.min.js"></script>
+    <!-- counterup JS -->
+    <script src="assets/js/jquery.waypoints.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- Apexchart JS -->
+    <script src="assets/plugins/apexchart/apexcharts.min.js"></script>
+    <script src="assets/plugins/apexchart/chart-data.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/app.js"></script>
 </body>
 </html>
