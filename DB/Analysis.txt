@@ -1,0 +1,22 @@
+		            **  PreClinic System Analysis  **
+
+		** Setting **
+
+1-  Hospital        (id,hospID,hospName,phone,email,address,currencySymbol,invoiceLogo,hospitalLogo,actionDate,staffID,modifiedDate,staffUpdated)
+2:  Departement     (id,deptID,deptName,remark,hospID,actionDate)
+3-  Role            (id,roleID,roleName,actionDate)
+4-  StaffType       (id,staffTypeID,staffTypeName,actionDate)
+5-  Staff           (id,staffID,staffName,password,phone,deptID,roleID,staffTypeID,status,actionDate,userCreated)
+
+		** Doctor **
+
+6-  specialization (id,spcID,spcName,status,actionDate,staffID)
+7-  doctor         (id,drID,drName,spcID,hasUser,password,apptFee,status,actionDate,staffID)
+8-  schedual       (id,schedID,drID,weekDays,startTime,endTime,status,actionDate)
+
+		** Patient **
+
+9-  patient        (id,ptID,ptName,gender,phone,age,ageType,address,birthDate,actionDate,staffID)
+10- appointement   (id,apptID,ptID,apptFee,discount,total,paid,balance,status,paymentStatus,actionDate,staffID,modifiedDate,staffUpdated)
+
+11- drug           (id,drugID,drugName,initialQuantity,purchasePrice,sellingprice,barcode,quantity,reOrderLevel,staffID,actionDate,modifiedDate,expireDate)

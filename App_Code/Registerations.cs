@@ -132,4 +132,39 @@ public class Registerations : System.Web.Services.WebService
         return Result;
     }
 
+    /* Hospital Operation */
+    public List<Response> HospitalOperation(string hospID, string hospName, string phone, string email, string address, string currency, string invoiceLogo, string hospitalLogo, string staffID, string op)
+    {
+        List<Response> result = new List<Response>();
+        try
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("SpecOperation", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@specID", SqlDbType.VarChar, 50).Value = specID;
+                cmd.Parameters.Add("@specName", SqlDbType.VarChar, 100).Value = specName;
+                cmd.Parameters.Add("@status", SqlDbType.VarChar, 100).Value = status;
+                cmd.Parameters.Add("@userID", SqlDbType.VarChar, 100).Value = userID;
+                cmd.Parameters.Add("@op", SqlDbType.VarChar, 100).Value = op;
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    result.Add(new Response()
+                    {
+                        Msg = Convert.ToString(dr["Msg"]),
+                    });
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            // MessageBox.Show("Operation Error and " + e.ToString());
+        }
+        return result;
+    }
+
 }
