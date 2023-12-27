@@ -98,4 +98,38 @@ public class Registerations : System.Web.Services.WebService
         return Result;
     }
 
+    /* Get DDL Specialist */
+    [WebMethod]
+    public List<Specialist> ddlSpec()
+    {
+        List<Specialist> Result = new List<Specialist>();
+        try
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                {
+                    SqlCommand Cmd = new SqlCommand("ddlSpec", conn);
+                    Cmd.CommandType = CommandType.StoredProcedure;
+                    SqlDataReader dr = Cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        Result.Add(new Specialist
+                        {
+                            specID = dr["specID"].ToString(),
+                            specName = dr["specName"].ToString(),
+                        });
+                    }
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            // MessageBox.Show("Connection Wrong" + ex.Message);
+        }
+        return Result;
+    }
+
 }
